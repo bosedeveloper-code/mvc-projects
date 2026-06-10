@@ -2,6 +2,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
 import ChangePassword from "./pages/ChangePassword";
+import ForgetPassword from "./pages/ForgetPassword";
 
 const userRoutes = {
     public: [
@@ -16,6 +17,10 @@ const userRoutes = {
         {
             path: "/register",
             element: <RegisterPage />,
+        },
+        {
+            path: "/forget-password",
+            element: <ForgetPassword />,
         },
     ],
 
