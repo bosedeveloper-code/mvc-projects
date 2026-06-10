@@ -8,6 +8,7 @@ import MainLayout from "./layout/MainLayout";
 import userRoutes from "./modules/user/routes";
 import opdRoutes from "./modules/opd/routes";
 import ipdRoutes from "./modules/ipd/routes";
+import NotFoundPage from "./shared/pages/NotFoundPage";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -73,6 +74,7 @@ function App() {
         ))}
 
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }
