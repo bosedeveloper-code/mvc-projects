@@ -1,14 +1,9 @@
-import type { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 
-import Header from "./Header.tsx";
-import Sidebar from "./Sidebar.tsx";
-import Footer from "./Footer.tsx";
-
-interface Props {
-    children: ReactNode;
-}
-
-const MainLayout = ({ children }: Props) => {
+const MainLayout = () => {
     return (
         <div className="app-container">
             <Header />
@@ -17,7 +12,7 @@ const MainLayout = ({ children }: Props) => {
                 <Sidebar />
 
                 <main className="main-content">
-                    {children}
+                    <Outlet />
                 </main>
             </div>
 
@@ -26,4 +21,4 @@ const MainLayout = ({ children }: Props) => {
     );
 };
 
-export default MainLayout
+export default MainLayout;
